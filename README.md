@@ -11,9 +11,9 @@ This repo contains a Gradio app that lets you browse, search, and chat-view dial
 
 ### Where things live
 
-- App code: `gradio_app/app.py`
-- App deps: `gradio_app/requirements.txt`
-- App docs: `gradio_app/README.md`
+- App code: `apps/multiwoz/app.py`
+- App deps: `apps/multiwoz/requirements.txt`
+- App docs: `apps/multiwoz/README.md`
 - Cloned dataset: `multiwoz/`
   - MultiWOZ 2.2 JSON: `multiwoz/data/MultiWOZ_2.2/{train,dev,test}/dialogues_*.json`
   - Schema: `multiwoz/data/MultiWOZ_2.2/schema.json`
@@ -25,7 +25,7 @@ This repo contains a Gradio app that lets you browse, search, and chat-view dial
 1) Launch the Gradio app
 
 ```bash
-cd /Users/joyyang/Projects/socrates/one/gradio_app
+cd /Users/joyyang/Projects/socrates/one/apps/multiwoz
 pip install -r requirements.txt
 python app.py
 ```

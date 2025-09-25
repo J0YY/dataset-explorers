@@ -8,7 +8,7 @@ import gradio as gr
 
 def get_data_root() -> Path:
 	current_file_path: Path = Path(__file__).resolve()
-	workspace_root: Path = current_file_path.parents[1]
+	workspace_root: Path = current_file_path.parents[2]
 	return workspace_root / "multiwoz" / "data" / "MultiWOZ_2.2"
 
 
