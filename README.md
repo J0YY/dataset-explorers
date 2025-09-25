@@ -9,6 +9,13 @@ What’s here
 How to run an app
 - See the app’s own README, e.g. `apps/multiwoz/README.md`.
 
+Dataset fetching
+- We do not commit datasets. For MultiWOZ specifically, run:
+```bash
+python3 scripts/fetch_multiwoz.py
+```
+- This clones the official source `budzianowski/multiwoz` and places files under `multiwoz/data/MultiWOZ_2.2/` automatically, without any extra input.
+
 Add a new app (one at a time)
 1. Pick `DATASET_LINK` (HF id or CSV/JSON URL) and `DATASET_SLUG` (folder name)
 2. Follow `docs/cursor_prompt.md` to copy the MultiWOZ UI and wire loaders to your link
