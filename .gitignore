@@ -3,8 +3,8 @@
 # Do not commit local docs prompts
 docs/
 
-# Do not commit dataset source clones by default
-multiwoz/
+# Do not commit dataset source clones by default (anchor to repo root)
+/multiwoz/
 
 # Python
 __pycache__/
