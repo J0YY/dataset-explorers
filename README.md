@@ -4,10 +4,11 @@ Gradio apps for exploring datasets, one folder per dataset under `apps/`.
 
 What’s here
 - `apps/multiwoz/`: MultiWOZ 2.2 explorer (search, filters, and chat view)
+- `apps/misc/`: MiSC explorer (HF: `jihyoung/MiSC`) with the same UI/UX
 - `docs/cursor_prompt.md`: step-by-step prompt to create another app identical in UI, changing only the dataset link
 
 How to run an app
-- See the app’s own README, e.g. `apps/multiwoz/README.md`.
+- See the app’s own README, e.g. `apps/multiwoz/README.md` or `apps/misc/README.md`.
 
 Dataset fetching
 - We do not commit datasets. For MultiWOZ specifically, run:
@@ -15,6 +16,12 @@ Dataset fetching
 python3 scripts/fetch_multiwoz.py
 ```
 - This clones the official source `budzianowski/multiwoz` and places files under `multiwoz/data/MultiWOZ_2.2/` automatically, without any extra input.
+
+- For MiSC (HF):
+```bash
+python3 scripts/fetch_misc.py
+```
+  - Caches Hugging Face splits if available and always downloads raw JSONL files to `data/misc/`.
 
 Add a new app (one at a time)
 1. Pick `DATASET_LINK` (HF id or CSV/JSON URL) and `DATASET_SLUG` (folder name)
