@@ -1,3 +1,7 @@
+READ THIS FIRST — Imitate the existing app exactly
+- Treat `apps/multiwoz` in this GitHub repo as the canonical reference. Replicate its layout, UX, styling (ribbon header, buttons, chat bubbles), component names, and interaction flow as closely as possible.
+- Do not invent a new UI pattern. Only change dataset wiring and dataset labels where necessary.
+
 I need you to build Gradio Dataset Explorer App based on this dataset: 
 
 Inputs I have provided for this run
@@ -6,6 +10,7 @@ Inputs I have provided for this run
 
 Constraint
 - Make the new app practically identical to `apps/multiwoz` in the repository https://github.com/J0YY/dataset-explorers in UI/UX and styling (ribbon header, Load & Search results as markdown, Dialogue/Item ID selector, View as Chat 💬, Random button). Only data loading changes.
+- Assume the engineer will clone and read this repo; reference `apps/multiwoz/app.py` for concrete code structure and reuse it.
 
 Goal: For target dataset link (the dataset i provideed; some may be raw JSON/CSV without any GitHub repo), create a self-contained Gradio app to browse, search/filter, and optionally view a single item as a chat when the schema is conversational.
 
@@ -17,7 +22,7 @@ Goal: For target dataset link (the dataset i provideed; some may be raw JSON/CSV
 3) Implement loaders that abstract over `DATASET_LINK`: Hugging Face datasets (preferred) or CSV/JSON/JSONL files
 4) Provide keyword search, item id/index selection (like Dialogue ID), random sampling, and chat rendering if conversational
 5) Add a one-line helper script: `scripts/fetch_<DATASET_SLUG>.py` (no args) that prepares the dataset automatically for cloners
-6) Add `requirements.txt` and a dataset-specific `README.md` that includes: `python3 scripts/fetch_<DATASET_SLUG>.py`
+6) Add `requirements.txt` and a dataset-specific `README.md` that includes: `python3 scripts/fetch_<DATASET_SLUG>.py` and makes it explicit that the dataset is imported locally before launching
 7) Launch locally and verify parity with `apps/multiwoz`
 8) Commit only `apps/<DATASET_SLUG>/`, the new script under `scripts/`, and docs, then push
 
